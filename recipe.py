@@ -38,13 +38,32 @@ def combine_ingredients(*ingredient_dicts):
 
 
 def format_shopping_list(combined_ingredients):
-    with open('shopping_list.md', 'w') as f:
+
+    head = '''<!DOCTYPE html>
+    <html>
+    <body>
+
+    <h1>Shopping List</h1>
+
+    <form>'''
+
+    foot = '''</form>
+
+    </body>
+    </html>'''
+
+    with open('index.html', 'w') as f:
+        f.write(head)
         for ingredient, amount in combined_ingredients.items():
             if isinstance(amount, float):
-                f.write('- [ ] {}: {}\n'.format(ingredient, round(amount, 1)))
+                f.write('<input type="checkbox" {}: {}>'.format(ingredient,
+                                                                round(amount, 1)))
             else:
-                f.write('- [ ] {}: {} {}\n'.format(ingredient, amount.value,
-                                             amount.unit))
+                f.write('<input type="checkbox" {}: {} {}>'.format(ingredient,
+                                                                   amount.value,
+                                                                   amount.unit))
+
+        f.write(foot)
 
 
 i = parse_ingredients(read_recipe('katsu.txt'))
