@@ -1,8 +1,0 @@
-onion,1,n
-rice,0.700,kg
-carrot,2,n
-garlic,4,n
-peppers,3,n
-garam masala,2,imperial tablespoon
-salt,4,imperial teaspoon
-black pepper,2,imperial teaspoon
