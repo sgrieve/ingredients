@@ -1,0 +1,6 @@
+red onion,1,n
+rice,300,g
+carrot,2,n
+garlic,4,n
+garam masala,2,imperial tablespoon
+salt,4,imperial teaspoon
