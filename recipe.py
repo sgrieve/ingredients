@@ -56,10 +56,10 @@ def format_shopping_list(combined_ingredients):
         f.write(head)
         for ingredient, amount in combined_ingredients.items():
             if isinstance(amount, float):
-                f.write('<input type="checkbox" {}: {}>'.format(ingredient,
+                f.write('<input type="checkbox"> {}: {}<br>'.format(ingredient,
                                                                 round(amount, 1)))
             else:
-                f.write('<input type="checkbox" {}: {} {}>'.format(ingredient,
+                f.write('<input type="checkbox"> {}: {} {}<br>'.format(ingredient,
                                                                    amount.value,
                                                                    amount.unit))
 
