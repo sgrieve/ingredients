@@ -1,6 +1,4 @@
----
-title: Document Center
----
+## Shopping List
 
 - [ ] red onion: 1.0
 - [ ] rice: 1000.0 g
