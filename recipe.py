@@ -41,9 +41,9 @@ def format_shopping_list(combined_ingredients):
     with open('shopping_list.md', 'w') as f:
         for ingredient, amount in combined_ingredients.items():
             if isinstance(amount, float):
-                f.write('-[ ] {}: {}\n'.format(ingredient, round(amount, 1)))
+                f.write('- [ ] {}: {}\n'.format(ingredient, round(amount, 1)))
             else:
-                f.write('-[ ] {}: {} {}\n'.format(ingredient, amount.value,
+                f.write('- [ ] {}: {} {}\n'.format(ingredient, amount.value,
                                              amount.unit))
 
 
