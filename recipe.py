@@ -38,12 +38,12 @@ def combine_ingredients(*ingredient_dicts):
 
 
 def format_shopping_list(combined_ingredients):
-    with open('shoppping_list.txt', 'w') as f:
+    with open('shopping_list.md', 'w') as f:
         for ingredient, amount in combined_ingredients.items():
             if isinstance(amount, float):
-                f.write('{}: {}\n'.format(ingredient, round(amount, 1)))
+                f.write('-[ ] {}: {}\n'.format(ingredient, round(amount, 1)))
             else:
-                f.write('{}: {} {}\n'.format(ingredient, amount.value,
+                f.write('-[ ] {}: {} {}\n'.format(ingredient, amount.value,
                                              amount.unit))
 
 
